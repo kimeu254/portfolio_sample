@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="home_style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    </style>
+</head>
+<body>
+
+    <div class="wrapper">
+        <!--Top menu -->
+        <div class="section">
+            <div class="top_navbar">
+                <div id="main">
+                    <span style="font-size:30px; cursor:pointer;" onclick="openNav()">&#9776; </span>
+                  </div>
+                  <div>
+                    <h1 id="text3d">JIMMY MUTISO</h1>
+                </div>
+            </div>
+        </div>
+        <div id="mySidenav" class="sidenav">
+             <!--profile image & text-->
+        <div class="profile">
+            <img src="images/images (12).jpeg" alt="profile_picture">
+            <h3>Jimmy Mutiso</h3>
+            <p>Software Developer</p>
+        </div>
+            <!--menu item-->
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href=""><i class="fa fa-fw fa-home"></i>Home</a>
+            <a href=""><i class="fa fa-fw fa-question"></i>About</a>
+            <a href=""><i class="fa fa-fw fa-institution"></i>Work</a>
+            <a href=""><i class="fa fa-fw fa-phone"></i>Contact</a>
+        </div>
+    </div>
+    <div id="main-div">
+        <div class="row-1">
+            <h1>Full Stack <br>Developer </h1>
+        </div>
+
+        <div class="row-2">
+            <h2>Bio</h2>
+        </div>
+
+        <div class="row-3">
+            <h3>
+                A champion of best practise who is organised, has the ability to handle complex assignments 
+                effectively and also has the required level of skills needed to make every voter feel 
+                special.
+            </h3>
+        </div>
+    </div>
+    <!-- Footer -->
+    <footer class="footer text-right">
+        <div class="container">
+            <div class="row">
+                <div class="edge">
+                     <a href="">©2022 Jimmy Mutiso</a>
+                </div>
+                <div class="hart">
+                    <a href=""><i class="fa fa-phone"></i> </a>
+                    <a href=""><i class="fa fa-envelope"></i> </a>
+                    <a href=""><i class="fa fa-linkedin-square"></i> </a>
+                    <a href=""><i class="fa fa-github"></i> </a>
+                    <a href=""><i class="fa fa-twitter"></i> </a>
+                    <a href=""><i class="fa fa-instagram"></i> </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- End Footer -->
+  <script>
+    function openNav() {
+        document.getElementById("mySidenav").style.width = "250px";
+        document.getElementById("main").style.marginLeft = "250px";
+        document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+      }
+      
+      function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+        document.getElementById("main").style.marginLeft= "0";
+        document.body.style.backgroundColor = "white";
+      }
+  </script>
+</body>
+</html>
