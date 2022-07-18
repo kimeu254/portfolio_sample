@@ -1,21 +1,40 @@
 body {
   margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Garamond, serif;
+}
+
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 50%;
+}
+
+#myBtn:hover {
+  background-color: #555;
 }
 
 .topnav {
   overflow: hidden;
   position: static;
-  background-color: transparent;
-  background:transparent;
+  background-color: white;
   width:100%;
   left:0;
   padding:0;
   text-align:center;
   font-size:13px;
   font-weight:601;
-  border-bottom:2px solid whitesmoke;
-  border-top:2px solid whitesmoke;
+  border-bottom:2px solid gainsboro;
+  border-top:2px solid gainsboro;
 }
 
 
@@ -49,16 +68,7 @@ body {
   display: flex;
   margin-left: 12%;
 }
-img {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  
-}
-.image {
-  margin-top: 10%;
-  
-}
+
 .text {
   font-size: 20px;
   padding-left: 60px;
@@ -70,7 +80,6 @@ img {
 }
 
 .button-1{
-  background-color: #4CAF50; /* Green */
   border: none;
   color: white;
   padding: 16px 32px;
@@ -103,9 +112,9 @@ img {
 
  
 .footer {
-  position: fixed;
+  position: absolute;
   left: 0;
-  bottom: 0;
+  margin-top: auto;
   width: 100%;
   background-color: #111;
   color: white;
@@ -118,50 +127,439 @@ img {
   color: white;
   text-decoration: none;
   font-size: 17px;
+  font-family: Arial, Helvetica, sans-serif;
 
-}
-
-
-.hart a{
-  float: right;
-  padding: 12px;
-  color: white;
-  text-decoration: none;
-  font-size: 17px;
-
-}
-
-.hart a:hover{
-  color: rgb(0, 162, 255);
 }
 
 #section-1{
-  height: 400px;
+  height: 200px;
 }
 
 #section-2{
-  height: 550px;
+  height: 700px;
+  position: relative;
+  min-height: 90vh;
+  padding: 50px 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #f1f1f1;
 }
+
+.skill-row h2 {
+  font-size: x-large;
+}
+
+.skill-row p {
+  
+}
+
+.skill-block {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+
+}
+
+.skill-info {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+
+}
+
+.box {
+  position: relative;
+  padding: 20px 0;
+  display: flex;
+}
+
+.skill-row {
+  text-align: center;
+}
+
+.icon-1 {
+  min-width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.icon-1:hover {
+  opacity: 0.7;
+}
+
+.skill-box {
+  width: 40%;
+  padding: 40px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 30px;
+  margin-left: 10px;
+  text-align: center;
+  background-color: white;
+}
+
+.skills:not(:last-child){
+  margin-bottom: 30px;
+}
+.details{
+  width: 100%;
+  display: flex;  
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+.bar{
+  position: relative;
+
+  border: 2px solid #0d96e0;
+
+  border-radius: 20px;
+
+}
+.bar div{
+  position: relative;
+  width: 0;
+  height: 9px;
+  border-radius: 10px;
+  background-color: #0d96e0;
+}
+
+#html-bar{
+  animation: html-fill 2s forwards;
+}
+@keyframes html-fill{
+  100%{
+      width: 90%;
+  }
+}
+#css-bar{
+  animation: css-fill 2s forwards;
+}
+@keyframes css-fill{
+  100%{
+      width: 75%;
+  }
+}
+#js-bar{
+  animation: js-fill 2s forwards;
+}
+@keyframes js-fill {
+  100%{
+      width: 72%;
+  }
+}
+#vue-bar{
+  animation: vue-fill 2s forwards;
+}
+@keyframes vue-fill{
+  100%{
+      width: 70%;
+  }
+} 
+
+#php-bar{
+  animation: php-fill 2s forwards;
+}
+@keyframes php-fill{
+  100%{
+      width: 92%;
+  }
+} 
+
+#sql-bar{
+  animation: sql-fill 2s forwards;
+}
+@keyframes sql-fill{
+  100%{
+      width: 85%;
+  }
+} 
+
+#flutter-bar{
+  animation: flutter-fill 2s forwards;
+}
+@keyframes flutter-fill{
+  100%{
+      width: 87%;
+  }
+} 
 
 #section-3{
   height: 550px;
 }
 
-#section-4{
-  height: 550px;
+.work-row h1 {
+  text-align: center;
 }
+
+
+/* Float four columns side by side */
+.work-column {
+  float: left;
+  width: 23%;
+  padding: 0 10px;
+}
+
+/* Remove extra left and right margins, due to padding */
+.work-block {margin: 0 -5px;}
+
+/* Clear floats after the columns */
+.work-block:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive columns */
+@media screen and (max-width: 600px) {
+  .work-column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+
+/* Style the counter cards */
+.work-card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  margin-left: 10px;
+  background-color: #f1f1f1;
+}
+
+
+#section-4{
+  height: 900px;
+  background-color: #f1f1f1;
+}
+
+.blog-row{
+  text-align: center;
+}
+
+.blog-block {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+  
+}
+
+.leftcolumn {   
+  float: left;
+  width: 60%;
+  padding: 16px;
+}
+
+/* Right column */
+.rightcolumn {
+  float: right;
+  width: 20%;
+  padding-left: 20px;
+}
+
+/* Fake image */
+.fakeimg img{
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  
+}
+
+/* Add a card effect for articles */
+.card {
+   background-color: white;
+   padding: 20px;
+   margin-top: 20px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}  
+
+.blog-image img{
+  height: 200px;
+  width: 100%;
+}
+
+.about-img-row {
+  display: flex;
+
+}
+
+.about-img img{
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+
 
 #section-5{
   height: 550px;
+  background-color: white;
 }
 
 #section-6{
-  height: 550px;
+  height: 400px;
+  background-color: #f1f1f1;
+  position: relative;
+  min-height: 90vh;
+  padding: 50px 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
-.block1, .block2, .block3, .block4{
-  display: inline-flex;
+.contact-row {
+  text-align: center;
+}
+
+.contact-row h2 {
+
+}
+
+.contact-row p {
+
+}
+
+.contact-block {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+
+}
+
+.contact-info {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+
+}
+
+.box {
+  position: relative;
+  padding: 1px 0;
+  display: flex;
+}
+
+.box-icon {
+  min-width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.box-icon:hover {
+  opacity: 0.7;
+}
+
+.icon-text {
+  display: flex;
+  margin-left: 20px;
+  font-size: 16px;
+  color: gray;
+  flex-direction: column;
+  font-weight: 300;
+}
+
+.icon-text h3 {
+  font-weight: 500;
+  color: #0d96e0;
+}
+
+.socials {
+  width: 40%;
+  padding: 40px;
+  background: #fff;
+}
+
+.social h2 {
+  font-size: 30px;
+  color: #333;
+  font-weight: 500;
+}
+
+.block1 {
+  display: inline-block;
   padding: 20px;
   margin-left: 10%;
+  border: 1px solid gainsboro;  
+  background-color: white; 
+  font-family: Copperplate, Papyrus;
 }
 
+.block2 {
+  display: inline-flex;
+  padding: 30px;
+  margin-left: 20%;
+  border: 1px solid white;  
+  background-color: white; 
+}
+
+
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 20px;
+  text-align: center;
+  text-decoration: none;
+  margin: 2px 1px;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-whatsapp {
+  background: rgb(105, 226, 105);
+  color: white;
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+.fa-linkedin {
+  background: #007bb5;
+  color: white;
+}
+
+.fa-github {
+  background: black;
+  color: white;
+}
+
+.fa-instagram {
+  background: #125688;
+  color: white;
+}
+
+.head-underline {
+  text-align: center;
+  text-decoration: underline;
+}
+
+.text-span {
+  text-decoration: none;
+  display: inline-block;
+}
